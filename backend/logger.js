@@ -11,7 +11,12 @@ function logError(msg) {
     logger.error(msg)
 }
 
+function getLogger() {
+    return logger;
+}
+
 module.exports = {
     logInfo: logInfo,
-    logError: logError
+    logError: logError,
+    getLogger: getLogger
 };

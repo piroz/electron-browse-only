@@ -18,6 +18,7 @@ const {
 const {
     logInfo
 } = require("./logger");
+const { startUpdater } = require("./updater");
 
 let win;
 
@@ -63,6 +64,8 @@ function createWindow() {
     win.on("closed", () => {
         win = null;
     });
+
+    startUpdater();
 }
 
 function start() {
