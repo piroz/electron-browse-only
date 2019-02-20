@@ -26,7 +26,7 @@ function startUpdater() {
         sendStatus("アプリの更新版を確認中");
     })
     autoUpdater.on("update-available", (info) => {
-        sendStatus("アプリの更新版がダウンロードできます");
+        sendStatus("アプリの更新版をダウンロードしています");
     })
     autoUpdater.on("update-not-available", (info) => {
         sendStatus("アプリは最新です");
@@ -41,7 +41,9 @@ function startUpdater() {
         sendStatus(log_message);
     })*/
     autoUpdater.on("update-downloaded", (info) => {
-        sendStatus("アプリの更新版がダウンロードできました、次回起動時に更新されます。");
+        sendStatus("アプリの更新版がダウンロードできました、再起動します");
+
+        autoUpdater.quitAndInstall();
     });
 
     autoUpdater.checkForUpdatesAndNotify();
