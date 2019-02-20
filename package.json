@@ -36,8 +36,8 @@
     "osenv": "^0.1.5"
   },
   "build": {
-    "productName": "fess-desktop",
-    "appId": "me.muraka.fess-desktop",
+    "productName": "test-app",
+    "appId": "me.muraka.test-app",
     "directories": {
       "output": "dist"
     },

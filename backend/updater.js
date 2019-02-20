@@ -12,7 +12,7 @@ function sendStatus(msg) {
     });
 
     notify.notify({
-        title: "fess-desktop",
+        title: "test-app",
         text: msg
     })
 }
