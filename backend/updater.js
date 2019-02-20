@@ -22,13 +22,13 @@ function startUpdater() {
     autoUpdater.logger = getLogger();
 
     autoUpdater.on("checking-for-update", () => {
-        sendStatus("アプリの更新版を確認中");
+        sendStatus("アプリの更新版を確認しています");
     })
     autoUpdater.on("update-available", (info) => {
         sendStatus("アプリの更新版をダウンロードしています");
     })
     autoUpdater.on("update-not-available", (info) => {
-        sendStatus("アプリは最新です");
+        sendStatus("最新のアプリを実行しています");
     })
     autoUpdater.on("error", (err) => {
         sendStatus("Error in auto-updater. " + err);
