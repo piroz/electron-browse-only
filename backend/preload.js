@@ -37,6 +37,13 @@ window.updateProgress = (value) => {
 };
 
 onload = () => {
+    $(".nav.navbar-nav").css("visibility", "hidden");
+    $("footer .textmuted").css("visibility", "hidden");
+    $(".list-inline").hide();
+    $("aside").remove();
+    $("nav").removeClass("navbar-dark").removeClass("bg-dark").addClass("navbar-light").css("background-color", "#f0f0f0");
+
+    $("#searchOptionsButton").hide()
     $("a.link").on("click", function(){
 
         if ($(this).data("uri").match(/drive/)) {
