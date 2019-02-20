@@ -8,7 +8,7 @@ function sendStatus(msg) {
     let notify = require("electron-notify");
 
     notify.setConfig({
-        displayTime: 6000
+        displayTime: 3000
     });
 
     notify.notify({
