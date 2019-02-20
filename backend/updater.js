@@ -20,7 +20,6 @@ function sendStatus(msg) {
 function startUpdater() {
 
     autoUpdater.logger = getLogger();
-    autoUpdater.autoInstallOnAppQuit = true;
 
     autoUpdater.on("checking-for-update", () => {
         sendStatus("アプリの更新版を確認中");
