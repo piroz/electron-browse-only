@@ -44,11 +44,7 @@ onload = () => {
     $("nav").removeClass("navbar-dark").removeClass("bg-dark").addClass("navbar-light").css("background-color", "#f0f0f0");
 
     $("#searchOptionsButton").hide()
-    $("a.link").on("click", function(){
-
-        if ($(this).data("uri").match(/drive/)) {
-            return true;
-        }
+    $(document).on("click", "a.link", function(){
 
         dl($(this).data("uri"));
 
